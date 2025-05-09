@@ -45,7 +45,7 @@ public class Play {
             player = 0;
         }
         else {
-            player = 3;
+            player = 2;
         }
         return player;
     }
@@ -115,7 +115,7 @@ public class Play {
                 }
 
        }else{
-            player = 3;
+            player = 2;
             stop = 0;
        }
 

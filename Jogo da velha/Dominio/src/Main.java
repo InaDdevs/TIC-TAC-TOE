@@ -31,10 +31,10 @@ public class Main {
 
         play.execute();
 
-        if (play.player == 0) {
+        if (play.player == 1) {
+            System.out.println("O Player '"+playerOne.name+"' ganhou");
+        } else if (play.player == 0) {
             System.out.println("O Player '"+playerTwo.name+"' ganhou");
-        } else if (play.player == 1) {
-            System.out.println("O Player '"+playerOne.name+"' ganhou");;
         } else {
             System.out.println("Deu velha");
         }
