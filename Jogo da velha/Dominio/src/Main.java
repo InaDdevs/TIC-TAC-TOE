@@ -19,6 +19,7 @@ public class Main {
         System.out.println("Informe o nome do player 2:");
         playerTwo.name = scanner.nextLine();
 
+
         System.out.println("Sr."+ playerOne.name + " e Sr." + playerTwo.name +", aqui vai algumas regras :");
         System.out.println("1 - O jogo é jogado em um tabuleiro 3x3.");
         System.out.println("2 - O jogador 1 é o X e o jogador 2 é o O.");
@@ -30,5 +31,12 @@ public class Main {
 
         play.execute();
 
+        if (play.player == 0) {
+            System.out.println("O Player '"+playerTwo.name+"' ganhou");
+        } else if (play.player == 1) {
+            System.out.println("O Player '"+playerOne.name+"' ganhou");;
+        } else {
+            System.out.println("Deu velha");
+        }
     }
     }

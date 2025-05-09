@@ -4,9 +4,6 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Play {
-    Jogador playerOne = new Jogador();
-    Jogador playerTwo = new Jogador();
-
     Scanner scanner = new Scanner(System.in);
     String[][] board = new String[3][3];
     public int player; // 0 representa circulo e X o x mesmo KKKKK
@@ -43,8 +40,12 @@ public class Play {
     public int checkPlayer() {
         if (player == 0) {
             player = 1;
-        }else {
+        }
+        else if (player == 1) {
             player = 0;
+        }
+        else {
+            player = 3;
         }
         return player;
     }
@@ -86,12 +87,8 @@ public class Play {
                     for (int i = 0; i < 3; i++) {
                         if ( board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0]!=("")) {
                             if (player==0){
-                                display();
-                                System.out.println("O 'O' ganhou");
                                 stop=0;
-                            }else{
-                                display();
-                                System.out.println("O 'X' ganhou");
+                            }else if (player==1){
                                 stop=0;
                             }
                         }
@@ -100,12 +97,8 @@ public class Play {
                                for (int j = 0; j < 3; j++) {
                                    if ( board[0][j] == board[1][j] && board[0][j] == board[2][j] && board[0][j]!=("")) {
                                        if (player==0){
-                                           display();
-                                           System.out.println("O 'O' ganhou");
                                            stop=0;
-                                       }else{
-                                           display();
-                                           System.out.println("O 'X' ganhou");
+                                       }else if (player==1){
                                            stop=0;
                                        }
                                    }
@@ -115,21 +108,14 @@ public class Play {
                 if ((board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0]!=("")) ||
                     (board[2][0] == board[1][1] && board[2][0] == board[0][2] && board[0][2]!=(""))) {
                     if (player==0){
-                        display();
-                        System.out.println("O 'O' ganhou");
                         stop=0;
-                    }else{
-                        display();
-                        System.out.println("O 'X' ganhou");
+                    }else if (player==1){
                         stop=0;
                     }
                 }
 
-
-
        }else{
-            display();
-            System.out.println("Deu velha");
+            player = 3;
             stop = 0;
        }
 
