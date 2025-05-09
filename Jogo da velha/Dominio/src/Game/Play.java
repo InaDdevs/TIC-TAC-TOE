@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Play {
     Scanner scanner = new Scanner(System.in);
     String[][] board = new String[3][3];
-    private int player; // 0 representa circulo e X o x mesmo KKKKK
-    int stop = 1;
+    public int player; // 0 representa circulo e X o x mesmo KKKKK
+    public int stop = 1;
     int cont = 1;
 
 
