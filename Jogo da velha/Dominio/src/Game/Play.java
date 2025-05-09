@@ -4,6 +4,9 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Play {
+    Jogador playerOne = new Jogador();
+    Jogador playerTwo = new Jogador();
+
     Scanner scanner = new Scanner(System.in);
     String[][] board = new String[3][3];
     public int player; // 0 representa circulo e X o x mesmo KKKKK
@@ -83,9 +86,11 @@ public class Play {
                     for (int i = 0; i < 3; i++) {
                         if ( board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0]!=("")) {
                             if (player==0){
+                                display();
                                 System.out.println("O 'O' ganhou");
                                 stop=0;
                             }else{
+                                display();
                                 System.out.println("O 'X' ganhou");
                                 stop=0;
                             }

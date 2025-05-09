@@ -30,13 +30,5 @@ public class Main {
 
         play.execute();
 
-    if (play.stop == 0 && play.player==1 ) {
-            System.out.println("O jogo acabou, o vencedor é  " + playerOne.name + " e " + playerTwo.name + " perdeu :(");
-            return;
-        } else {
-        System.out.println("O jogo acabou, o vencedor é  " + playerTwo.name + " e " + playerOne.name + " perdeu :(");
     }
-        scanner.close();
-
     }
-}
